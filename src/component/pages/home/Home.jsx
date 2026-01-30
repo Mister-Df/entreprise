@@ -3,6 +3,7 @@ import "./Home.css";
 import busness from "/images/business.jpg";
 import illustration from "/images/illustration.png";
 import Service from "../Service";
+import Apropos from "../Apropos";
 
 export default function Home() {
   return (
@@ -39,6 +40,9 @@ export default function Home() {
       </div>
         <div>
           <Service />
+        </div>
+        <div>
+          <Apropos />
         </div>
     </div>
   );
