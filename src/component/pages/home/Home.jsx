@@ -4,6 +4,9 @@ import busness from "/images/business.jpg";
 import illustration from "/images/illustration.png";
 import Service from "../Service";
 import Apropos from "../Apropos";
+import Realistion from "../Realistion";
+
+
 
 export default function Home() {
   return (
@@ -43,6 +46,9 @@ export default function Home() {
         </div>
         <div>
           <Apropos />
+        </div>
+        <div>
+          <Realistion />
         </div>
     </div>
   );
