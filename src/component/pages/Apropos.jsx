@@ -3,7 +3,7 @@ import busness from "/images/business.jpg";
 
 export default function Apropos() {
   return (
-    <div className="bg-green-100">
+    <div id="apropos" className="bg-green-50">
       <div className="container my-5 py-4">
         <div className="flex gap-4">
           <div>
@@ -11,7 +11,7 @@ export default function Apropos() {
           </div>
           <div>
             <h2>
-              <span className=" uppercase">à</span> propos de nous
+              <span className="poppins-semibold uppercase">à</span> propos de nous
             </h2>
             <h4>Qui sommes-nous ?</h4>
             <p>

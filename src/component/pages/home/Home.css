@@ -2,4 +2,19 @@
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
+  
+}
+.slick-prev{
+  /* display: hidden; */
+  opacity: 0;
+}
+.slick-next{
+  /* display: hidden; */
+  opacity: 0;
+}
+.objectFit{
+  aspect-ratio: 3/3;
+  inline-size: 50px;
+  object-fit: contain;
+  border-radius: 100vw;
 }

@@ -5,7 +5,8 @@ import illustration from "/images/illustration.png";
 import Service from "../Service";
 import Apropos from "../Apropos";
 import Realistion from "../Realistion";
-
+import Patener from "../Patener";
+import Contact from "../Contact";
 
 
 export default function Home() {
@@ -49,6 +50,12 @@ export default function Home() {
         </div>
         <div>
           <Realistion />
+        </div>
+        <div>
+          <Patener />
+        </div>
+        <div>
+          <Contact />
         </div>
     </div>
   );

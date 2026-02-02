@@ -5,8 +5,8 @@ import { SiBoost } from "react-icons/si";
 
 export default function Service() {
   return (
-    <div className=" container mt-5 p-3">
-      <h2 className="text-center mb-4 ">Nos services</h2>
+    <div id="service" className=" container mt-5 p-3">
+      <h2 className="text-center mb-4 poppins-semibold ">Nos services</h2>
       <div className="flex justify-between">
         <div className="shadow-2xs py-3 px-3 border flex-col items-center justify-center flex">
           <MdBrandingWatermark className="text-5xl text-green-800 mb-2 " />

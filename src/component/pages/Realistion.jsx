@@ -6,11 +6,11 @@ import Nossas from "/images/Nossas.jpg";
 
 export default function Realistion() {
   return (
-    <div className="container mb-5">
+    <div id="realisation" className="container mb-5">
       <div>
-        <h3 className="text-center p-3">Nos Réalisations</h3>
+        <h3 className="text-center p-3 poppins-semibold">Nos Réalisations</h3>
         <div className="flex justify-center  gap-3">
-          <div className="card" style={{ width: "18rem" }}  data-aos="fade-up" data-aos-duration="2000">
+          <div className="card" style={{ width: "18rem" }} data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
             <img src={bureau} className="card-img-top h-[160px]" alt="..." />
             <div className="card-body bg-green-50">
               <h5 className="card-title">Projet Alpha</h5>
@@ -23,7 +23,7 @@ export default function Realistion() {
             </div>
           </div>
 
-          <div className="card" style={{ width: "18rem" }} data-aos-duration="1000" data-aos-anchor-placement="center-bottom" data-aos="fade-up">
+          <div className="card" style={{ width: "18rem" }} data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos="fade-up">
             <img src={Corporate} className="card-img-top h-[160px]" alt="..." />
             <div className="card-body bg-green-50">
               <h5 className="card-title">Projet Beta</h5>
@@ -36,7 +36,7 @@ export default function Realistion() {
             </div>
           </div>
 
-          <div className="card" style={{ width: "18rem" }} data-aos-duration="2000" data-aos="fade-up">
+          <div className="card" style={{ width: "18rem" }} data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos="fade-up">
             <img src={Sall} className="card-img-top h-[160px]" alt="..." />
             <div className="card-body bg-green-50">
               <h5 className="card-title">Projet Gamma</h5>
