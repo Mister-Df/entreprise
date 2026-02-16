@@ -1,27 +1,32 @@
-import React from "react";
+﻿import React from "react";
 import Logo from "../../common/Logo";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <div className="bg-light ">
+    <div className="bg-light shadow-sm">
       <div>
-        <div className="flex container items-center justify-between py-2 px-3">
-          <Logo logo={"Logo"} className={" text-xl text-green-700 font-bold "} />
-          <div className="flex justify-between list-none gap-3">
-            {/* <Link to={'/home'} className="text-decoration-none text-dark">Accueil</Link> */}
-            <a className="text-decoration-none text-dark" href="#accueil">Accueil</a>
-            <a className="text-decoration-none text-dark" href="#service">Services</a>
-            <a className="text-decoration-none text-dark" href="#apropos"><span className=" uppercase">à</span> propos</a>
-            <a className="text-decoration-none text-dark" href="#realisation">Réalisation</a>
-            <a className="text-decoration-none text-dark" href="#contact">Contact</a>
-            {/* <Link  to={'/home/service'}className="text-decoration-none text-dark">Services</Link> */}
-            {/* <Link to={'/'} className="text-decoration-none text-dark"><span className=" uppercase">à</span> propos</Link> */}
-            {/* <Link to={'/'} className="text-decoration-none text-dark">Réalisation</Link> */}
-            {/* <Link to={'/'} className="text-decoration-none text-dark">Contact</Link> */}
+        <div className="container flex flex-col gap-3 px-3 py-3 md:flex-row md:items-center md:justify-between md:py-2">
+          <Logo logo={"Logo"} className={"text-xl font-bold text-green-700"} />
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 list-none text-sm md:text-base">
+            <a className="text-decoration-none text-dark" href="#accueil">
+              Accueil
+            </a>
+            <a className="text-decoration-none text-dark" href="#service">
+              Services
+            </a>
+            <a className="text-decoration-none text-dark" href="#apropos">
+              <span className="uppercase">À</span> propos
+            </a>
+            <a className="text-decoration-none text-dark" href="#realisation">
+              Réalisation
+            </a>
+            <a className="text-decoration-none text-dark" href="#contact">
+              Contact
+            </a>
             <Outlet />
           </div>
-          <li className=" list-none text-xs text-lime-50 bg-green-800 rounded py-1 px-2">
+          <li className="list-none rounded bg-green-800 px-3 py-1.5 text-xs text-lime-50">
             Demander un devis
           </li>
         </div>

@@ -1,20 +1,69 @@
-.poppins-semibold {
+﻿.poppins-semibold {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
-  
 }
-.slick-prev{
-  /* display: hidden; */
+
+.hero-title {
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: clamp(0.95rem, 1.4vw, 1.08rem);
+}
+
+.section-title {
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  line-height: 1.25;
+}
+
+.service-card {
+  min-height: 210px;
+}
+
+.realisation-card {
+  min-height: 300px;
+}
+
+.realisation-card .card-text {
+  margin-bottom: 0;
+}
+
+.partner-card {
+  min-height: 220px;
+}
+
+.slick-prev,
+.slick-next {
   opacity: 0;
 }
-.slick-next{
-  /* display: hidden; */
-  opacity: 0;
-}
-.objectFit{
-  aspect-ratio: 3/3;
+
+.objectFit {
+  aspect-ratio: 1 / 1;
   inline-size: 50px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 100vw;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+@media (max-width: 640px) {
+  .slick-slide > div {
+    margin: 0 4px;
+  }
+
+  .service-card {
+    min-height: 185px;
+  }
+
+  .realisation-card {
+    min-height: auto;
+  }
+
+  .partner-card {
+    min-height: 205px;
+  }
 }
