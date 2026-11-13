@@ -6,11 +6,12 @@ import Apropos from "../Apropos";
 import Realistion from "../Realistion";
 import Patener from "../Patener";
 import Contact from "../Contact";
+import Faq from "../Faq";
 
 export default function Home() {
   return (
     <div id="accueil">
-      <div className="bg-green-50">
+      <div className="bg-green-50 md:mt-16 mt-36">
         <div className="container flex flex-col items-center gap-6 pb-5 pt-4 md:flex-row md:items-start md:py-6">
           <div className="w-full md:w-1/2">
             <h3 className="hero-title poppins-semibold">
@@ -20,12 +21,12 @@ export default function Home() {
               Développons ensemble vos projets.
             </p>
             <div className="flex w-full flex-col items-start gap-2 pt-3 sm:flex-row sm:items-center sm:gap-3">
-              <div className="flex h-9 w-full cursor-pointer items-center justify-center rounded bg-green-800 px-3 py-1 text-light sm:w-auto">
+              <a href="#service" className="flex h-9 w-full items-center justify-center rounded bg-green-800 px-3 py-1 text-decoration-none text-light sm:w-auto">
                 Nos services
-              </div>
-              <div className="flex h-9 w-full cursor-pointer items-center justify-center rounded px-3 outline sm:w-auto">
+              </a>
+              <a href="#contact" className="flex h-9 w-full items-center justify-center rounded px-3 text-decoration-none text-dark outline sm:w-auto">
                 Contactez-nous
-              </div>
+              </a>
             </div>
           </div>
           <div className="w-full md:w-1/2">
@@ -49,6 +50,7 @@ export default function Home() {
       <div>
         <Patener />
       </div>
+      <Faq />
       <div>
         <Contact />
       </div>

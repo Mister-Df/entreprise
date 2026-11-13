@@ -1,36 +1,27 @@
 ﻿import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../common/Logo";
-import { Outlet } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <div className="bg-light shadow-sm">
-      <div>
-        <div className="container flex flex-col gap-3 px-3 py-3 md:flex-row md:items-center md:justify-between md:py-2">
-          <Logo logo={"Logo"} className={"text-xl font-bold text-green-700"} />
-          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 list-none text-sm md:text-base">
-            <a className="text-decoration-none text-dark" href="#accueil">
-              Accueil
-            </a>
-            <a className="text-decoration-none text-dark" href="#service">
-              Services
-            </a>
-            <a className="text-decoration-none text-dark" href="#apropos">
-              <span className="uppercase">À</span> propos
-            </a>
-            <a className="text-decoration-none text-dark" href="#realisation">
-              Réalisation
-            </a>
-            <a className="text-decoration-none text-dark" href="#contact">
-              Contact
-            </a>
-            <Outlet />
-          </div>
-          <li className="list-none rounded bg-green-800 px-3 py-1.5 text-xs text-lime-50">
-            Demander un devis
-          </li>
-        </div>
+    <header className="bg-light fixed-top shadow-sm">
+      <div className="container flex flex-col gap-3 px-3 py-3 md:flex-row md:items-center md:justify-between md:py-2">
+        <Link to="/" className="text-decoration-none">
+          <Logo logo="Dev " className="text-xl amatic-sc-regular font-bold text-green-700" />
+        </Link>
+        <nav aria-label="Navigation principale" className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm md:text-md">
+          <Link className="text-decoration-none hover:underline text-dark" to="/">Accueil</Link>
+          <Link className="text-decoration-none text-dark" to="/services">Services</Link>
+          <Link className="text-decoration-none text-dark" to="/a-propos">À propos</Link>
+          <Link className="text-decoration-none text-dark" to="/realisations">Réalisations</Link>
+          <Link className="text-decoration-none text-dark" to="/partenaires">Partenaires</Link>
+          <Link className="text-decoration-none text-dark" to="/faq">FAQ</Link>
+          <Link className="text-decoration-none text-dark" to="/contact">Contact</Link>
+        </nav>
+        <Link to="/contact" className="rounded bg-green-800 hover:bg-green-100 hover:text-green-800 px-3 py-1.5 text-center text-xs text-white">
+          Demander un devis
+        </Link>
       </div>
-    </div>
+    </header>
   );
 }
