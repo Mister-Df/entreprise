@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import busness from "/images/business.jpg";
 
-const principles = [
+const principles =[
   {
     title: "Écoute",
     text: "Chaque projet commence par la compréhension de votre activité et de vos priorités.",

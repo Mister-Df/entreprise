@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SiDialogflow, SiBoost } from "react-icons/si";
 import { MdBrandingWatermark } from "react-icons/md";
 
-const services = [
+const services =[
   {
     title: "Développement Web",
     Icon: MdBrandingWatermark,

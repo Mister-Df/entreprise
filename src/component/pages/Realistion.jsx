@@ -5,7 +5,7 @@ import Corporate from "/images/Corporate.jpg";
 import bureau from "/images/Modern.jpg";
 import Nossas from "/images/Nossas.jpg";
 
-const projects = [
+const projects =[
   {
     title: "Site vitrine",
     category: "Développement Web",

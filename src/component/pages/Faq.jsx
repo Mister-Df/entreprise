@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const questions = [
+const questions =[
   {
     question: "Quels types de projets accompagnez-vous ?",
     answer: "Nous accompagnons les entreprises dans la création de sites web, leur visibilité en ligne et leurs projets de conseil digital.",

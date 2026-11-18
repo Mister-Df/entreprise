@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const contactEmail = "contactcom15@gmail.com";
+const contactEmail = "fouscocom15@gmail.com";
 
 export default function Contact() {
   const [userName, setUserName] = useState("");
