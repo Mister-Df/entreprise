@@ -1,83 +1,74 @@
 ﻿import React from "react";
+import { Link } from "react-router-dom";
 import Sall from "/images/téléchargement.jpg";
 import Corporate from "/images/Corporate.jpg";
 import bureau from "/images/Modern.jpg";
 import Nossas from "/images/Nossas.jpg";
 
+const projects =[
+  {
+    title: "Site vitrine",
+    category: "Développement Web",
+    description: "Présenter une activité, ses services et ses coordonnées dans un site clair et adapté au mobile.",
+    image: bureau,
+    alt: "Espace de travail moderne",
+  },
+  {
+    title: "Image de marque",
+    category: "Identité & communication",
+    description: "Créer une présentation cohérente de l’entreprise à travers ses supports numériques.",
+    image: Corporate,
+    alt: "Environnement professionnel",
+  },
+  {
+    title: "Communication digitale",
+    category: "Marketing Digital",
+    description: "Organiser les messages et les contenus pour mieux faire connaître une offre.",
+    image: Sall,
+    alt: "Présentation d’un projet professionnel",
+  },
+  {
+    title: "Conseil numérique",
+    category: "Accompagnement",
+    description: "Faire le point sur les besoins et établir des pistes d’action adaptées à l’entreprise.",
+    image: Nossas,
+    alt: "Espace de réunion professionnel",
+  },
+];
+
+
+
 export default function Realistion() {
   return (
-    <div id="realisation" className="container mb-5 px-3">
-      <div>
-        <h3 className="section-title poppins-semibold p-3 text-center">Nos Réalisations</h3>
-        <div className="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div
-            className="realisation-card card w-full max-w-[18rem]"
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom"
-            data-aos-duration="2000"
-          >
-            <img src={bureau} className="card-img-top h-[160px] object-cover" alt="Projet Alpha" />
-            <div className="card-body flex flex-col justify-between bg-green-50">
-              <h5 className="card-title mb-2">Projet Alpha</h5>
-              <div className="flex items-center justify-between gap-2">
-                <p className="card-text text-[14px]">Masterclasse engineer</p>
-                <a href="#" className="btn btn-success btn-sm">
-                  Voir plus
-                </a>
-              </div>
-            </div>
-          </div>
+    <main id="realisation" className="container mb-5 px-3">
+      <header className="mx-auto mb-5 max-w-3xl text-center">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-green-800">Nos savoir-faire en pratique</p>
+        <h1 className="section-title poppins-semibold mb-3">Réalisations & formats de projets</h1>
+        <p className="mb-0 leading-7 text-secondary">
+          Chaque collaboration est différente. Voici des exemples de types de projets que nous pouvons construire avec vous, selon vos besoins et vos objectifs.
+        </p>
+      </header>
 
-          <div
-            className="realisation-card card w-full max-w-[18rem]"
-            data-aos-duration="1000"
-            data-aos-anchor-placement="top-bottom"
-            data-aos="fade-up"
-          >
-            <img src={Corporate} className="card-img-top h-[160px] object-cover" alt="Projet Beta" />
-            <div className="card-body flex flex-col justify-between bg-green-50">
-              <h5 className="card-title mb-2">Projet Beta</h5>
-              <div className="flex items-center justify-between gap-2">
-                <p className="card-text text-[14px]">Lorem ipsum dolor</p>
-                <a href="#" className="btn btn-success btn-sm">
-                  Voir plus
-                </a>
-              </div>
+      <div className="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {projects.map(({ title, category, description, image, alt }) => (
+          <article key={title} className="realisation-card card w-full max-w-[20rem] overflow-hidden shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-lg">
+          <div className="group">
+            <img src={image} className="card-img-top h-[175px] object-cover transition-transform duration-500 group-hover:scale-105" alt={alt} />
+            <div className="card-body flex flex-col bg-green-50">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-green-800">{category}</p>
+              <h2 className="card-title text-lg font-semibold">{title}</h2>
+              <p className="card-text leading-6 text-secondary">{description}</p>
             </div>
           </div>
-
-          <div
-            className="realisation-card card w-full max-w-[18rem]"
-            data-aos-duration="2000"
-            data-aos-anchor-placement="top-bottom"
-            data-aos="fade-up"
-          >
-            <img src={Sall} className="card-img-top h-[160px] object-cover" alt="Projet Gamma" />
-            <div className="card-body flex flex-col justify-between bg-green-50">
-              <h5 className="card-title mb-2">Projet Gamma</h5>
-              <div className="flex items-center justify-between gap-2">
-                <p className="card-text text-[14px]">Lorem ipsum dolor</p>
-                <a href="#" className="btn btn-success btn-sm">
-                  Voir plus
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="realisation-card card w-full max-w-[18rem]" data-aos="fade-up">
-            <img src={Nossas} className="card-img-top h-[160px] object-cover" alt="Projet Bridge" />
-            <div className="card-body flex flex-col justify-between bg-green-50">
-              <h5 className="card-title mb-2">Projet Bridge</h5>
-              <div className="flex items-center justify-between gap-2">
-                <p className="card-text text-[14px]">Lorem ipsum dolor</p>
-                <a href="#" className="btn btn-success btn-sm">
-                  Voir plus
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+          </article>
+        ))}
       </div>
-    </div>
+
+      <section className="my-5 rounded bg-green-50 px-4 py-5 text-center" aria-labelledby="projet-title">
+        <h2 id="projet-title" className="mb-2 text-xl font-semibold">Imaginons votre prochain projet</h2>
+        <p className="mb-3 text-secondary">Décrivez-nous votre besoin : nous verrons ensemble quelle approche peut vous convenir.</p>
+        <Link to="/contact" className="btn bg-green-800 text-light">Présenter mon projet</Link>
+      </section>
+    </main>
   );
 }

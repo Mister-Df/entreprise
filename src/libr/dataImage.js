@@ -1,4 +1,4 @@
- export const dataImage = [
+ export const dataImage =[
   {
     name: "Dupont Jean",
     fonction: "Entrepreneur",

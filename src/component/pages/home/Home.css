@@ -42,13 +42,29 @@
 .objectFit {
   aspect-ratio: 1 / 1;
   inline-size: 50px;
-  object-fit: cover;
+  /* object-fit: cover; */
   border-radius: 100vw;
 }
 
 .slick-slide > div {
   margin: 0 10px;
 }
+
+
+
+.amatic-sc-regular {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.amatic-sc-bold {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 
 @media (max-width: 640px) {
   .slick-slide > div {
